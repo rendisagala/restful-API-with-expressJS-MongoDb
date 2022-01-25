@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/rendisagala/restful-API-with-expressJS-MongoDb/issues"
   },
-  "homepage": "https://github.com/rendisagala/restful-API-with-expressJS-MongoDb#readme"
+  "homepage": "https://github.com/rendisagala/restful-API-with-expressJS-MongoDb#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "mongoose": "^6.1.8"
+  }
 }
