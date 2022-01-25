@@ -1,0 +1,22 @@
+{
+  "name": "restfulapi",
+  "version": "1.0.0",
+  "description": "restful API with expressJS and mongoDB",
+  "main": "app.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rendisagala/restful-API-with-expressJS-MongoDb.git"
+  },
+  "keywords": [
+    "restfulapi"
+  ],
+  "author": "rendisagala",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rendisagala/restful-API-with-expressJS-MongoDb/issues"
+  },
+  "homepage": "https://github.com/rendisagala/restful-API-with-expressJS-MongoDb#readme"
+}
