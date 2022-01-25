@@ -21,6 +21,7 @@
   "homepage": "https://github.com/rendisagala/restful-API-with-expressJS-MongoDb#readme",
   "dependencies": {
     "cors": "^2.8.5",
+    "ejs": "^3.1.6",
     "express": "^4.17.2",
     "mongoose": "^6.1.8",
     "nodemon": "^2.0.15"

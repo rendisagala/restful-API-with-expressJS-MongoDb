@@ -1,10 +1,22 @@
 import express from "express";
+
 import cors from "cors";
 
 const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+//template engine setup
+import path from "path";
+import { dirname } from "path";
+import { fileURLToPath } from "url";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views/pages"));
+//serving static files (css,etc)
+app.use(express.static("public"));
 
 //database
 import mongoose from "mongoose";
@@ -17,9 +29,7 @@ async function main() {
 
 //method
 app.get("/", (req, res) => {
-  res.json({
-    message: "Making Restful API",
-  });
+  res.render("login.ejs");
 });
 
 //port
