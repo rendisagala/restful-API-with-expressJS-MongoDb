@@ -103,3 +103,6 @@ body {
   background-color: #fd0;
   color: black;
 }
+.registerDisplay {
+  display: none;
+}

@@ -36,16 +36,15 @@ app.get("/", (req, res) => {
 app.get("/login", (req, res) => {
   res.render("login.ejs");
 });
-app.get("/register", (req, res) => {
+app.get("/login/register", (req, res) => {
   res.render("register.ejs");
 });
-app.get("/index", (req, res) => {
+app.get("/login/index", (req, res) => {
   res.render("index.ejs");
 });
-app.post("/create"),
-  (req, res) => {
-    res.render("create.ejs");
-  };
+app.get("login/index/create", (req, res) => {
+  res.render("create.ejs");
+});
 
 //router
 import { router } from "./router/router.mjs";

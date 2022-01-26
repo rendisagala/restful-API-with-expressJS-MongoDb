@@ -3,10 +3,12 @@ const { Schema } = mongoose;
 
 const dataSchema = new Schema(
   {
+    id: String,
     fullName: String,
     email: String,
     userName: String,
     password: String,
+    postedOn: Date,
   },
   { timestamps: true }
 );
