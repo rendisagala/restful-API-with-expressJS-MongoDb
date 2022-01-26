@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign in - Demo</title>
+    <title>Register - Demo</title>
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
 
     <!-- fa pls -->
@@ -33,22 +33,31 @@
         </header>
 
         <div class="login-form">
-          <div class="subtitle">Login or register</div>
+          <div class="subtitle">Register</div>
+          <input type="text" placeholder="Full Name" />
+          <input type="email" placeholder="Email" />
           <input type="text" placeholder="Username" />
           <input type="password" placeholder="Password" />
+          <input type="password" placeholder="Re-Type Password" />
         </div>
 
         <footer>
           <div class="left social-login">
-            Login with
+            Register with
             <a href="#"><i class="fa fa-fw fa-twitter"></i></a>
             <a href="#"><i class="fa fa-fw fa-facebook"></i></a>
             <a href="#"><i class="fa fa-fw fa-google-plus"></i></a>
           </div>
 
           <div class="right form-actions">
-            <a href="/index" class="ui-button inactive login">Login</a>
-            <a href="/register" class="ui-button inactive register">Register</a>
+            <a href="/index" class="ui-button inactive register">Register</a>
+          </div>
+          <br />
+          <div class="left social-login">
+            Back to
+            <a href="/" class="ui-button inactive login login-register"
+              >Login</a
+            >
           </div>
         </footer>
       </div>

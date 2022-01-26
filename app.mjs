@@ -17,6 +17,7 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views/pages"));
 //serving static files (css,etc)
 app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, "public/js")));
 
 //database
 import mongoose from "mongoose";
@@ -30,6 +31,12 @@ async function main() {
 //method
 app.get("/", (req, res) => {
   res.render("login.ejs");
+});
+app.get("/register", (req, res) => {
+  res.render("register.ejs");
+});
+app.get("/index", (req, res) => {
+  res.render("index.ejs");
 });
 
 //port
