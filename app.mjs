@@ -1,5 +1,4 @@
 import express from "express";
-
 import cors from "cors";
 
 const app = express();
@@ -31,13 +30,21 @@ async function main() {
 //method
 app.get("/", (req, res) => {
   res.render("login.ejs");
+  res.redirect("/login");
+});
+app.get("/login", (req, res) => {
+  res.render("login.ejs");
 });
 app.get("/register", (req, res) => {
   res.render("register.ejs");
 });
-app.get("/index", (req, res) => {
+app.get("login/index", (req, res) => {
   res.render("index.ejs");
 });
+
+//router
+import { router } from "./router/router.mjs";
+app.use(router);
 
 //port
 const PORT = 3000;
