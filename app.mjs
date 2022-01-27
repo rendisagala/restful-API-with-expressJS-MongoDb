@@ -19,32 +19,8 @@ app.use(express.static("public"));
 app.use(express.static(path.join(__dirname, "public/js")));
 app.use("/css", express.static(__dirname + "/node_modules/bootstrap/dist/css"));
 
-//database
-import mongoose from "mongoose";
-main().catch((err) => console.log(err));
-
-async function main() {
-  await mongoose.connect("mongodb://localhost/ras_restful");
-  await console.log(`We're connected to database!`);
-}
-
-//method
-app.get("/", (req, res) => {
-  res.render("login.ejs");
-  res.redirect("/login");
-});
-app.get("/login", (req, res) => {
-  res.render("login.ejs");
-});
-app.get("/login/register", (req, res) => {
-  res.render("register.ejs");
-});
-app.get("/login/index", (req, res) => {
-  res.render("index.ejs");
-});
-app.get("login/index/create", (req, res) => {
-  res.render("create.ejs");
-});
+// database
+import { Data } from "./models/models.mjs";
 
 //router
 import { router } from "./router/router.mjs";
@@ -54,4 +30,7 @@ app.use(router);
 const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(Data());
 });
+
+export { app };

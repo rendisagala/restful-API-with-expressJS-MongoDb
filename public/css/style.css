@@ -106,3 +106,6 @@ body {
 .registerDisplay {
   display: none;
 }
+.registerButton {
+  cursor: pointer;
+}
