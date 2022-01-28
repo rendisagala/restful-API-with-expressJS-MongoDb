@@ -51,7 +51,9 @@
               placeholder="Search"
               aria-label="Search"
             />
-            <button class="btn btn-outline-light" type="submit">Search</button>
+            <button class="btn btn-outline-light search" type="submit">
+              Search
+            </button>
           </form>
         </div>
       </div>
@@ -68,15 +70,16 @@
         </thead>
         <tbody>
           <% users.forEach((user)=> { %>
-          <tr>
-            <td><%=user.id%></td>
-            <td><%=user.fullName %></td>
-            <td><%=user.userName%></td>
-            <td><%=user.email %></td>
+          <tr class="dataList">
+            <td class="id"><%=user.id%></td>
+            <td class="fullName"><%=user.fullName %></td>
+            <td class="userName"><%=user.userName%></td>
+            <td class="email"><%=user.email %></td>
           </tr>
           <% }) %>
         </tbody>
       </table>
     </div>
+    <script type="text/javascript" src="/js/script.js"></script>
   </body>
 </html>
